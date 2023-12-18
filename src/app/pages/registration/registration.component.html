@@ -1,0 +1,52 @@
+<!-- registration.component.html -->
+
+<div class="registration-form-container">
+  <h2>Register</h2>
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    
+    <div class="field">
+      <p class="control has-icons-left">
+        <input class="input" type="text" id="username" name="username" formControlName="username" required placeholder="Username">
+        <span class="icon is-small is-left">
+          <i class="fas fa-user"></i>
+        </span>
+      </p>
+      <div *ngIf="isFieldInvalid('username') && registrationForm.get('username')?.touched" class="alert">
+        <i class="fas fa-exclamation-triangle"></i> Username is required.
+      </div>
+    </div>
+
+    <div class="field">
+      <p class="control has-icons-left has-icons-right">
+        <input class="input" type="email" id="email" name="email" formControlName="email" required placeholder="Email">
+        <span class="icon is-small is-left">
+          <i class="fas fa-envelope"></i>
+        </span>
+        <span class="icon is-small is-right">
+          <i class="fas fa-check"></i>
+        </span>
+      </p>
+      <div *ngIf="isFieldInvalid('email') && registrationForm.get('email')?.touched" class="alert">
+        <i class="fas fa-exclamation-triangle"></i> Email is required and must be a valid email address.
+      </div>
+    </div>
+
+    <div class="field">
+      <p class="control has-icons-left">
+        <input class="input" type="password" id="password" name="password" formControlName="password" required placeholder="Password">
+        <span class="icon is-small is-left">
+          <i class="fas fa-lock"></i>
+        </span>
+      </p>
+      <div *ngIf="isFieldInvalid('password') && registrationForm.get('password')?.touched" class="alert">
+        <i class="fas fa-exclamation-triangle"></i> Password is required and must be valid (Ex:Ab!123456)
+      </div>
+    </div>
+
+    <div class="field">
+      <p class="control">
+        <button type="submit" class="button is-success" [disabled]="!registrationForm.valid">Register</button>
+      </p>
+    </div>
+  </form>
+</div>

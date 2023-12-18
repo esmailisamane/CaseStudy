@@ -1,0 +1,8 @@
+@import "~bulma/css/bulma.min.css";
+
+
+h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }

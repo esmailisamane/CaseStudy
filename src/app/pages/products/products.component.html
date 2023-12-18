@@ -1,0 +1,25 @@
+
+
+<h1 class="page-title">Product Listing</h1>
+
+<div class="flex-container">
+  <div class="categories">
+    <ul>
+      <li *ngFor="let category of categoryArray">
+        {{ category.name }}
+      </li>
+    </ul>
+  </div>
+
+  <div class="product-list">
+    <div *ngFor="let product of productsArray" class="product-card">
+      <img [src]="product.imageUrl" alt="{{ product.name }}" class="product-image">
+      <div class="product-details">
+        <h3 class="product-title">Featured Product</h3>
+        <h2 class="product-name">{{ product.name }}</h2>
+        <p class="product-price">{{ product.price | currency: 'USD': 'symbol' }}</p>
+        <button class="add-to-cart-button">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>

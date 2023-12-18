@@ -1,0 +1,24 @@
+/* registration.component.css */
+
+.registration-form-container {
+    max-width: 50%;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+  
+  .field {
+    margin-bottom: 1rem;
+  }
+  
+  .input {
+    width: 100%;
+  }
+  
+  .alert {
+    color: red;
+    font-size: 12px; 
+    margin-top: 5px;
+  }
+  
+
+  

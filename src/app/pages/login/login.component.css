@@ -1,0 +1,17 @@
+.login-form-container {
+    max-width: 40%;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+  
+.field {
+    margin-bottom: 1rem;
+ }
+  
+.error-message{
+  color: red;
+  font-size: 12px; 
+  margin-top: 5px;
+    
+  }
+  

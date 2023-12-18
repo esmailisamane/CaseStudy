@@ -1,0 +1,17 @@
+
+.home-welcome {
+    text-align: center;
+    margin: 50px 0;
+  }
+  
+  .home-welcome h2 {
+    font-size: 2em;
+    color: #333;
+  }
+  
+  .home-welcome p {
+    font-size: 1.2em;
+    color: #666;
+    padding: 20px;
+  }
+  

@@ -1,0 +1,37 @@
+<!-- login.component.html -->
+
+<div class="login-form-container">
+    <h2>Login</h2>
+    <form (ngSubmit)="login(username.value, password.value)">
+  
+      <div class="field">
+        <p class="control has-icons-left">
+          <input class="input" type="text" id="username" name="username" #username required placeholder="Username">
+          <span class="icon is-small is-left">
+            <i class="fas fa-user"></i>
+          </span>
+        </p>
+      </div>
+  
+      <div class="field">
+        <p class="control has-icons-left">
+          <input class="input" type="password" id="password" name="password" #password required placeholder="Password">
+          <span class="icon is-small is-left">
+            <i class="fas fa-lock"></i>
+          </span>
+        </p>
+      </div>
+  
+      <div class="field">
+        <p class="control">
+          <button type="submit" class="button is-primary">Login</button>
+        </p>
+      </div>
+  
+      <div class="error-message" *ngIf="errorMessage">
+        <i class="fas fa-exclamation-triangle"></i> {{ errorMessage }}
+      </div>
+  
+    </form>
+  </div>
+  
